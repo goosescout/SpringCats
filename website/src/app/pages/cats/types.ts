@@ -1,0 +1,15 @@
+export enum Subpage {
+  Create,
+  Add,
+  All,
+  ById,
+  ByName,
+  ByColor,
+  ByBirthDate,
+  ByOwnerId,
+  ByBreed,
+  Update,
+  Edit,
+  Delete,
+  Friendship,
+}

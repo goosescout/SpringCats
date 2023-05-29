@@ -1,0 +1,22 @@
+:root {
+  --transition-duration: 0.3s;
+  --transition-function: ease-in-out;
+}
+
+html {
+  background: rgb(87, 189, 109);
+  background: linear-gradient(
+    65deg,
+    rgba(87, 189, 109, 1) 0%,
+    rgba(65, 223, 33, 1) 35%,
+    rgba(161, 230, 127, 1) 100%
+  );
+
+  height: max-content;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.goosescout.spring.controller.ApplicationTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2023-05-18T13:03:21" hostname="Ayaka-2.local" time="0.824">
+  <properties/>
+  <testcase name="getAllOwners_Unauthorized()" classname="com.goosescout.spring.controller.ApplicationTest" time="0.107"/>
+  <testcase name="login_Ok()" classname="com.goosescout.spring.controller.ApplicationTest" time="0.315"/>
+  <testcase name="createUserAsAdmin_Ok()" classname="com.goosescout.spring.controller.ApplicationTest" time="0.146"/>
+  <testcase name="loginAsUser_Ok()" classname="com.goosescout.spring.controller.ApplicationTest" time="0.086"/>
+  <testcase name="addCat_Ok()" classname="com.goosescout.spring.controller.ApplicationTest" time="0.039"/>
+  <testcase name="getAllCats2Found()" classname="com.goosescout.spring.controller.ApplicationTest" time="0.031"/>
+  <testcase name="getCatsByBreed2Found()" classname="com.goosescout.spring.controller.ApplicationTest" time="0.015"/>
+  <testcase name="addFriendsOk()" classname="com.goosescout.spring.controller.ApplicationTest" time="0.023"/>
+  <testcase name="checkFriendsFriendsFound()" classname="com.goosescout.spring.controller.ApplicationTest" time="0.011"/>
+  <testcase name="removeFriendOk()" classname="com.goosescout.spring.controller.ApplicationTest" time="0.012"/>
+  <testcase name="checkFriendsFriendsNoneFound()" classname="com.goosescout.spring.controller.ApplicationTest" time="0.009"/>
+  <testcase name="deleteOwnerOk()" classname="com.goosescout.spring.controller.ApplicationTest" time="0.015"/>
+  <testcase name="getAllCatsNoneFound()" classname="com.goosescout.spring.controller.ApplicationTest" time="0.008"/>
+  <system-out><![CDATA[16:03:18.359 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Neither @ContextConfiguration nor @ContextHierarchy found for test class [ApplicationTest]: using SpringBootContextLoader
+16:03:18.362 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader -- Could not detect default resource locations for test class [com.goosescout.spring.controller.ApplicationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+16:03:18.384 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using ContextCustomizers for test class [ApplicationTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
+16:03:18.473 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using TestExecutionListeners for test class [ApplicationTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+16:03:18.474 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener -- Before test class: class [ApplicationTest], class annotated with @DirtiesContext [false] with mode [null]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2023-05-18T16:03:18.716+03:00  INFO 47216 --- [    Test worker] c.g.spring.controller.ApplicationTest    : Starting ApplicationTest using Java 17.0.6 with PID 47216 (started by michael in /Users/michael/Itmo coding/Programming Technologies/goosescout/spring/controller)
+2023-05-18T16:03:18.718+03:00  INFO 47216 --- [    Test worker] c.g.spring.controller.ApplicationTest    : No active profile set, falling back to 1 default profile: "default"
+2023-05-18T16:03:19.128+03:00  INFO 47216 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-18T16:03:19.154+03:00  INFO 47216 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2023-05-18T16:03:19.586+03:00  INFO 47216 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-18T16:03:19.619+03:00  INFO 47216 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-18T16:03:19.780+03:00  INFO 47216 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-18T16:03:19.880+03:00  INFO 47216 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:test user=SA
+2023-05-18T16:03:19.881+03:00  INFO 47216 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-18T16:03:19.894+03:00  INFO 47216 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-05-18T16:03:20.299+03:00  INFO 47216 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-18T16:03:20.304+03:00  INFO 47216 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-18T16:03:20.440+03:00  WARN 47216 --- [    Test worker] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.goosescout.spring.dao.repositories.CatOwnerRepository
+2023-05-18T16:03:20.562+03:00  WARN 47216 --- [    Test worker] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.goosescout.spring.dao.repositories.CatRepository
+2023-05-18T16:03:20.918+03:00  WARN 47216 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-18T16:03:21.127+03:00  INFO 47216 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-18T16:03:21.165+03:00  INFO 47216 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@117bfeb8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4781bb01, org.springframework.security.web.context.SecurityContextHolderFilter@4fb1bffd, org.springframework.security.web.header.HeaderWriterFilter@23b62cc3, org.springframework.web.filter.CorsFilter@31aec04a, org.springframework.security.web.authentication.logout.LogoutFilter@17c7cc93, com.goosescout.spring.controller.security.JwtAuthenticationFilter@733345f5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b842e79, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e620fa9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@109fff4a, org.springframework.security.web.session.SessionManagementFilter@37a74cf4, org.springframework.security.web.access.ExceptionTranslationFilter@2da7ef3e, org.springframework.security.web.access.intercept.AuthorizationFilter@4eb313ed]
+2023-05-18T16:03:21.340+03:00  INFO 47216 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-05-18T16:03:21.341+03:00  INFO 47216 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-18T16:03:21.342+03:00  INFO 47216 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-05-18T16:03:21.436+03:00  INFO 47216 --- [    Test worker] c.g.spring.controller.ApplicationTest    : Started ApplicationTest in 2.933 seconds (process running for 3.608)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
